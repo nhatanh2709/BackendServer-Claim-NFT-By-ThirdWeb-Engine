@@ -1,10 +1,12 @@
 import { Agent } from "https";
 import { NextApiRequest, NextApiResponse } from "next";
 import fetch from 'node-fetch';
-const BACKEND_WALLET_ADDRESS="0xB3701D5D1fCa73263c6C5B1328E248A6d1Ce2AAF"
-const NFT_CONTRACT_ADDRESS="0x3E0133C6ACec3e3dCb8F3b282a30d9D1539163A8"
-const ENGINE_URL="https://localhost:3005"
-const THIRDWEB_SECRET_KEY="Kuv62AUMupewEjOzlDe1zqOe0QmlI_MRbE9HNXgyAWN_W1UQo77TwqpYyowlo5q2P_1cKukst3jxLArttG2X8Q"
+const {
+    BACKEND_WALLET_ADDRESS,
+    NFT_CONTRACT_ADDRESS,
+    ENGINE_URL,
+    THIRDWEB_SECRET_KEY
+} = process.env
 
 const agent = new Agent({
     rejectUnauthorized: false
